@@ -1,0 +1,110 @@
+/* Boom Live Styles */
+:root{
+  --brandA:#FF32FF;
+  --brandB:#822EFF;
+  --whatsappA:#25D366;
+  --whatsappB:#128C7E;
+  --text:#333;
+  --card:#ffffff;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{
+  font-family: 'Roboto', system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  margin:0;
+  color:var(--text);
+  line-height:1.6;
+  background:linear-gradient(135deg, var(--brandA), var(--brandB));
+  overflow-x:hidden;
+}
+
+/* Nav (small; hide on scroll down) */
+nav{
+  position:fixed; top:0; left:0; right:0; z-index:1000;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:8px 18px;
+  background:rgba(0,0,0,0.55); backdrop-filter:blur(10px);
+  color:#fff; transition:top .35s ease;
+}
+nav .brand{
+  display:flex; align-items:center; gap:10px;
+  font-weight:700; font-size:.9rem; letter-spacing:.2px;
+}
+nav .brand img{width:26px;height:26px;border-radius:50%}
+nav ul{display:flex; gap:16px; list-style:none; margin:0; padding:0}
+nav a{color:#fff; text-decoration:none; font-weight:500; font-size:.85rem}
+nav a:hover{color:var(--brandA)}
+.nav-btn{
+  padding:6px 14px; border-radius:6px; font-size:.8rem;
+  background:linear-gradient(45deg, var(--brandA), var(--brandB));
+  color:#fff; box-shadow:0 4px 10px rgba(0,0,0,.15);
+  transition:transform .2s ease;
+}
+.nav-btn:hover{transform:scale(1.05)}
+
+/* Hero */
+.hero{
+  text-align:center; color:#fff;
+  padding:120px 20px 80px;
+  background:linear-gradient(135deg, var(--brandB), var(--brandA));
+  border-radius:0 0 40px 40px; animation:fadeInUp 1s ease both;
+}
+.hero-logo{
+  width:140px;height:140px;border-radius:50%;
+  border:4px solid #fff; box-shadow:0 6px 20px rgba(0,0,0,.2);
+  margin-bottom:14px; object-fit:cover;
+}
+.hero .welcome{font-size:1.25rem; margin:4px 0 0}
+.hero h1{font-size:3rem;margin:6px 0 6px}
+.hero .agency{font-weight:700;margin:0 0 20px}
+
+/* Buttons */
+.btn{
+  display:inline-block; padding:14px 28px; margin:10px;
+  border-radius:10px; font-weight:800; letter-spacing:.3px;
+  text-decoration:none; transition:transform .25s ease, box-shadow .25s ease;
+  box-shadow:0 8px 18px rgba(0,0,0,.18);
+}
+.btn-primary{color:#fff;background:linear-gradient(45deg, var(--brandB), var(--brandA))}
+.btn-primary:hover{transform:translateY(-3px) scale(1.03)}
+.btn-whatsapp{color:#fff; background:linear-gradient(45deg, var(--whatsappA), var(--whatsappB))}
+.btn-whatsapp:hover{transform:translateY(-3px) scale(1.03)}
+
+/* Sections */
+section{
+  max-width:1024px; margin:40px auto; padding:46px 20px;
+  background:var(--card); border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.12);
+  opacity:0; transform:translateY(40px); transition:all .8s ease;
+  text-align:center;
+}
+section.show{opacity:1; transform:translateY(0)}
+h2{color:var(--brandB); margin:0 0 16px; font-size:1.8rem}
+
+/* Images */
+.policy-img, .reward-image, .platform-image{
+  max-width:100%; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,.15); margin:10px 0;
+}
+
+/* Social */
+.social{
+  margin-top:22px; display:flex; justify-content:center; gap:14px; flex-wrap:wrap;
+}
+.social a img{width:32px;height:32px;transition:transform .2s ease}
+.social a img:hover{transform:scale(1.15)}
+
+/* Footer */
+footer{
+  text-align:center; color:#fff; padding:20px;
+  background:linear-gradient(90deg, var(--brandB), var(--brandA));
+  font-size:.95rem
+}
+
+/* Animations */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+
+/* Responsive */
+@media (max-width:600px){
+  .hero h1{font-size:2.4rem}
+  nav ul{gap:12px}
+  .btn{padding:12px 22px}
+}

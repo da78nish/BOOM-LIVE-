@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Boom Live Official Feed</title>
+  <link>https://boomlive.netlify.app/</link>
+  <description>Latest updates and features of Lollipop Live App.</description>
+  <item>
+    <title>Welcome to Lollipop Live</title>
+    <link>https://boomlive.netlify.app//</link>
+    <description>Join our app and enjoy live streaming & 1v1 calls.</description>
+  </item>
+</channel>
+</rss>
